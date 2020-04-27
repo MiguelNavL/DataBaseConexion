@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+            
+            
+       
+    <h:head>
+        <title>Conexion Base de Datos</title>
+
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+
+        <!-- Bootstrap core CSS -->
+
+        <h:outputStylesheet name="css/bootstrap.min.css" />
+
+        <!-- Custom styles for this template -->
+        <h:outputStylesheet name="css/simple-sidebar.css" />
+
+        <h:outputStylesheet name="css/all.css" />
+
+    </h:head>
+    <h:body>
+
+        <h:form>
+            <h3>LOGIN</h3>
+            <h:outputText value="Correo" />
+            <h:inputText id="correo" value="#{userController.usuario.correo}"></h:inputText>
+
+            <br></br><br></br>
+
+            <h:outputText value="Clave" />
+            <h:inputSecret id="clave" value="#{userController.usuario.clave}"></h:inputSecret>
+
+            <br></br><br></br>
+
+            <h:commandButton id="login" action="#{userController.login()}" value="Login"></h:commandButton>
+        </h:form>
+        
+        <h:messages id="mensajes"/>
+
+    </h:body>
+</html>
+
